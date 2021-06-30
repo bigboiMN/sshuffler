@@ -10,12 +10,10 @@ root.geometry('100x100')
 root.title('CC Screenshot Randomizer')
 
 # popup msg
-
-
-def pop_up_msg(msg):
+def pop_up_msg(var):
     popup = tk.Tk()
     popup.wm_title("Read!")
-    label = tk.Label(popup, text=msg)
+    label = tk.Label(popup, text=var)
     label.pack(side="top", fill="x", pady=10)
     b1 = tk.Button(popup, text="Okay", command=popup.destroy)
     b1.pack()
@@ -57,7 +55,7 @@ def screen_image():
 
 
 # Labels, Buttons, What else
-msg = "Keep clicking button after blank screens to continue shuffling. Add images to the same folder containing the exe"
+msg = "Click button after blank screens to continue shuffling. Add images to the same folder containing the exe."
 pop_up_msg(msg)
 screen_shot_button = tk.Button(root, text="Random Screenshot", command=screen_image, bg="Green", fg="White")
 
